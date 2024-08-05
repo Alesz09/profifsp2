@@ -1,0 +1,18 @@
+.area {
+    text-align: center;
+    padding: 32px;
+}
+
+/*
+   Importante fazer os estilos dependentes do estilo principal,
+   para que não 'vazem' para fora deste componente.
+   Este css vale para a aplicação inteira!!!                  
+*/
+
+.area h3 {
+    font-size: 32px;
+    border-bottom: 4px solid;
+    display: inline-block;
+    padding-bottom: 8px;
+} 
+
