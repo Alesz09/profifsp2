@@ -46,7 +46,9 @@ function App() {
   }
 
   return (
+
     <div>
+
       <Banner />
 
       { /* passando a lista de nomes de áreas para o componente Formulario */ }
@@ -55,10 +57,14 @@ function App() {
       { areas.map(area => <Area key={area.nome} 
                                 nome={area.nome} 
                                 corPrimaria={area.corPrimaria}
-                                corSecundaria={area.corSecundaria} />) }
+                                corSecundaria={area.corSecundaria} 
+                                professores={ professores.filter( prof => prof.area === area.nome ) }
+                          />) }
 
     </div>
-  );
+
+  )
+
 }
 
 export default App;

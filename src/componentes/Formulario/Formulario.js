@@ -6,8 +6,6 @@ import CampoTexto from "../CampoTexto/CampoTexto";
 import ListaSuspensa from "../ListaSuspensa/ListaSuspensa";
 import Botao from "../Botao/Botao";
 
-// Agora tem props, pois vamos receber o setter...
-
 const Formulario = (props) => {
 
     // Criando os estados...
@@ -19,7 +17,7 @@ const Formulario = (props) => {
     const aoSalvar = (evento) => {
         
         evento.preventDefault()
-        //console.log('Form foi submetido => ', nome, titulo, imagem, area)
+        
         props.aoProfCadastrado(
             {
                 "nome" : nome,
