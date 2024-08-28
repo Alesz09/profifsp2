@@ -1,0 +1,14 @@
+/* Produto.css */
+
+
+
+/* Estilos do rodapé */
+.rodape {
+    text-align: center;  /* Centraliza todo o conteúdo do rodapé */
+}
+
+/* Estilos da logo */
+.logo {
+    width: 60px;         /* Define o tamanho da logo */
+    margin-bottom: 10px; /* Define o espaço entre a logo e o nome */
+}

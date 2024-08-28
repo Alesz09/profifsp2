@@ -1,34 +1,30 @@
+// Area.js
 import React from "react";
 import './Area.css';
-import Professor from "../Professor/Professor";
+import Produto from '../Produto/Produto';
 
-const Area = (props) => {
+const Area = ({ nome, corPrimaria, corSecundaria, produtos }) => {
 
-    const corDeFundo = { backgroundColor : props.corSecundaria }
-    const corSublinhado = { borderColor : props.corPrimaria }
+  const css = { backgroundColor: corSecundaria }
 
-	if (props.professores.length > 0) {
-
-        return (
-            <section className="area" style={ corDeFundo } >
-                <h3 style={ corSublinhado }>{props.nome}</h3>
-                <div className="professores">
-                    {props.professores.map( prof => 
-                        <Professor 
-                            key={prof.nome} 
-                            nome={prof.nome} 
-                            titulo={prof.titulo} 
-                            imagem={prof.imagem} 
-                        />
-                    )}
-                </div>
-            </section>
-        )
-        
-    } else {
-        return null;  // ou return ''; se preferir retornar uma string vazia
-    }
+  return (
+    produtos.length > 0 && <section className="area" style={css}>
+      <h3 style={{ borderColor: corPrimaria }}>{nome}</h3>
+      <div className="produtos">
+        {produtos.map((produto, index) => (
+          <Produto 
+            key={index}
+            nome={produto.nome}
+            valor={produto.valor}
+            marca={produto.marca}
+            logo={produto.logo}  // Passando a logo para o componente Produto
+            secao={produto.secao}
+            estado={produto.estado}
+          />
+        ))}
+      </div>
+    </section>
+  )
 }
 
 export default Area;
-

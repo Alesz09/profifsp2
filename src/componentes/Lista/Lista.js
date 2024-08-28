@@ -9,7 +9,7 @@ const Lista = (props) => {
 
     <div className="lista">
 
-      <h2>Lista de Professores</h2>
+      <h2>Lista de Produtos</h2>
 
       {
       // Usa o método map para iterar sobre cada elemento do array props.objetos.
